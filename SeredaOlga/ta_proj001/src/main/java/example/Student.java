@@ -33,7 +33,7 @@ public class Student {
             avgRating = sum/amount;
             String nameOfBest = "";
             String nameOfCurrent = "";
-            Boolean theBest = false;
+            boolean theBest = false;
             float maxRating = students[0].getRating();
             for (Student student : students){
                 if(student.getRating() > maxRating){
