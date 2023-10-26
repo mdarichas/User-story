@@ -4,8 +4,8 @@ import java.text.DecimalFormat;
 
 public class Employee {
     private String name;
-    private float rate;
-    private float hours;
+    private float rate = 0.0f;
+    private float hours = 0.0f;
     private static float totalSum = 0.0f;
 
     public Employee(){}
@@ -47,13 +47,17 @@ public class Employee {
         return rate;
     }
     public void setRate(float rate) {
+        totalSum -= getSalary()+getBonuses();
         this.rate = rate;
+        totalSum += getSalary()+getBonuses();
     }
 
     public float getHours() {
         return hours;
     }
     public void setHours(float hours) {
+        totalSum -= getSalary()+getBonuses();
         this.hours = hours;
+        totalSum += getSalary()+getBonuses();
     }
 }
