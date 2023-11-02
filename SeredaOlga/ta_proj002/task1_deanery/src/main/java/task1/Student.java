@@ -124,26 +124,18 @@ public class Student {
                             ", " + passedList.get(i));
                 }
 
-                try
-                {
-                    for(int i = 0; i < disciplinesExam.size(); i++){
-                        String markStr = "no rating";
-                        if(marks.get(i) < 0){
-                            markStr = "no rating";
-                        }
-                        else {
-                            markStr = "" + marks.get(i);
-                        }
-                        result.append("\n" + disciplinesExam.get(i).getName() +
-                                ", " + markStr);
+                for(int i = 0; i < disciplinesExam.size(); i++){
+                    String markStr = "no rating";
+                    if(marks.get(i) < 0){
+                        markStr = "no rating";
                     }
-                    studentDescription = result.toString();
+                    else {
+                        markStr = "" + marks.get(i);
+                    }
+                    result.append("\n" + disciplinesExam.get(i).getName() +
+                            ", " + markStr);
                 }
-                catch (Exception e)
-                {
-                    System.out.println("\n" + e);
-                }
-
+                studentDescription = result.toString();
             }
             break;
             default:{
