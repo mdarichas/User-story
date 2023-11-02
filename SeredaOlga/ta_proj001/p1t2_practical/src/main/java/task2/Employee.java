@@ -1,4 +1,4 @@
-package practical;
+package task2;
 
 import java.text.DecimalFormat;
 
@@ -26,15 +26,6 @@ public class Employee {
     private float getBonuses(){
         return getSalary()/10;
     }
-    @Override
-    public String toString(){
-        DecimalFormat df = new DecimalFormat("#.##");
-        String salaryStr = df.format(getSalary());
-        String bonusStr = df.format(getBonuses());
-        return "Information about employee:\nName - " + name + "\nRate - " +
-                rate + "\nHours - " + hours + "\nSalary - " + salaryStr + "\nBonuses - "
-                + bonusStr + "\nTotal salary of all workers: " + totalSum + "\n";
-    }
 
     public String getName() {
         return name;
@@ -59,5 +50,15 @@ public class Employee {
         totalSum -= getSalary()+getBonuses();
         this.hours = hours;
         totalSum += getSalary()+getBonuses();
+    }
+
+    @Override
+    public String toString(){
+        DecimalFormat df = new DecimalFormat("#.##");
+        String salaryStr = df.format(getSalary());
+        String bonusStr = df.format(getBonuses());
+        return "Information about employee:\nName - " + name + "\nRate - " +
+                rate + "\nHours - " + hours + "\nSalary - " + salaryStr + "\nBonuses - "
+                + bonusStr + "\nTotal salary of all workers: " + totalSum + "\n";
     }
 }

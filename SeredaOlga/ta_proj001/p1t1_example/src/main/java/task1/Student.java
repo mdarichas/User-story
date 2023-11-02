@@ -1,4 +1,4 @@
-package example;
+package task1;
 
 import java.text.DecimalFormat;
 
@@ -52,18 +52,6 @@ public class Student {
         }
     }
 
-    @Override
-    public String toString(){
-        DecimalFormat df = new DecimalFormat("#.##");
-        String avgRatingStr = df.format(avgRating);
-        String avrRatingStr = "\nAverage rating of all students: ";
-        if (avgRating==-1){avrRatingStr += "[no students]";}
-        else if (avgRating==-2){avrRatingStr += "[to see average rating first execute " +
-                "the 'betterStudent()' method]";}
-        else {avrRatingStr += avgRatingStr;}
-
-        return "Name: " + name + "\nRating: " + rating + avrRatingStr + "\n";
-    }
 
     public String getName(){
         return this.name;
@@ -77,5 +65,18 @@ public class Student {
     }
     public void setRating(float rating) {
         this.rating = rating;
+    }
+
+    @Override
+    public String toString(){
+        DecimalFormat df = new DecimalFormat("#.##");
+        String avgRatingStr = df.format(avgRating);
+        String avrRatingStr = "\nAverage rating of all students: ";
+        if (avgRating==-1){avrRatingStr += "[no students]";}
+        else if (avgRating==-2){avrRatingStr += "[to see average rating first execute " +
+                "the 'betterStudent()' method]";}
+        else {avrRatingStr += avgRatingStr;}
+
+        return "Name: " + name + "\nRating: " + rating + avrRatingStr + "\n";
     }
 }

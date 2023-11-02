@@ -1,4 +1,4 @@
-package homework;
+package task3;
 
 import java.time.LocalDate;
 
@@ -18,12 +18,6 @@ public class Person {
         return currentYear - birthYear;
     }
 
-    @Override
-    public String toString(){
-        return "\nInformation about person:\nName - " + name + "\nBirthday year - " + birthYear +
-                "\nCurrent age - " + age();
-    }
-
     public String getName() {
         return name;
     }
@@ -36,5 +30,11 @@ public class Person {
     }
     public void setBirthYear(int birthYear) {
         this.birthYear = birthYear;
+    }
+
+    @Override
+    public String toString(){
+        return "\nInformation about person:\nName - " + name + "\nBirthday year - " + birthYear +
+                "\nCurrent age - " + age();
     }
 }
