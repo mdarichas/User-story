@@ -22,7 +22,7 @@ public class Main {
 
         Set<Integer> uSet;
         MyMethods methods = new MyMethods();
-        
+
 
         System.out.print("\n\nunion:\n");
         uSet = methods.union(mySet1, mySet2);
