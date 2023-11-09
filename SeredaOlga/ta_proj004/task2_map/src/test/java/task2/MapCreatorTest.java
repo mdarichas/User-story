@@ -2,9 +2,6 @@ package task2;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class MapCreatorTest {
@@ -20,7 +17,7 @@ class MapCreatorTest {
                 "Last name: Snow\n" +
                 "First name: Jon";
 
-        String actual = mc.printMap();
+        String actual = mc.getMap();
 
         assertEquals(expected, actual);
     }

@@ -18,7 +18,7 @@ public class MapCreator {
         personMap.values().removeIf(fN -> fN.equals(firstName));
     }
 
-    public String printMap(){
+    public String getMap(){
         List<String> list = new ArrayList<>();
         for (Map.Entry<String, String> person : personMap.entrySet()){
             list.add("\nLast name: " + person.getKey() +
@@ -43,6 +43,6 @@ public class MapCreator {
 
     @Override
     public String toString(){
-        return printMap();
+        return getMap();
     }
 }

@@ -3,27 +3,24 @@ package task3;
 import java.util.*;
 
 public class Student {
+    private static List<Student> students = new ArrayList<>();
     private String name;
     private Integer course;
 
+    public Student(){}
+
     public Student(String name, Integer course){
-        this.name = name;
-        this.course = course;
+        Student student = new Student();
+        student.setName(name);
+        student.setCourse(course);
+        addStudent(student);
     }
 
-    public void printStudents(List<Student> students, Integer course){
-        List<String> studentsByCourse = new ArrayList<>();
-        Iterator<Student> iterator = students.iterator();
-        while (iterator.hasNext()){
-            Student current = iterator.next();
-            if (current.getCourse().equals(course)){
-                studentsByCourse.add(current.getName());
-            }
-        }
-        System.out.println("\ncourse " + course + ":");
-        for (String student : studentsByCourse){
-            System.out.println(student);
-        }
+    public void addStudent(Student student){
+        students.add(student);
+    }
+    public static List<Student> getStudentsList(){
+        return students;
     }
 
     public String getName() {
@@ -41,4 +38,5 @@ public class Student {
     public void setCourse(Integer course) {
         this.course = course;
     }
+
 }
