@@ -21,17 +21,17 @@ public class Main {
         mySet2.add(1);
 
         Set<Integer> uSet;
-        MyMethods methods = new MyMethods();
+        OperationsOnSet method = new OperationsOnSet();
 
 
         System.out.print("\n\nunion:\n");
-        uSet = methods.union(mySet1, mySet2);
+        uSet = method.union(mySet1, mySet2);
         for (Integer element : uSet){
             System.out.print(element + "  ");
         }
 
         System.out.print("\n\nintersect:\n");
-        uSet = methods.intersect(mySet1, mySet2);
+        uSet = method.intersect(mySet1, mySet2);
         for (Integer element : uSet){
             System.out.print(element + "  ");
         }

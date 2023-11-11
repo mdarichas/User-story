@@ -5,10 +5,10 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MapCreator {
+public class MapProcessing {
     private Map<String, String> personMap = new LinkedHashMap<>();
 
-    public MapCreator(){}
+    public MapProcessing(){}
 
     public void addPerson(String lastName, String firstName){
         personMap.put(lastName, firstName);
